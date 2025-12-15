@@ -245,17 +245,15 @@ ROC-AUC: ~0.97
 
 ## 🚀 **Next Steps**
 
-**You might consider addressing the following (as applicable):**
-
-* Model limitations?
+** Model limitations **
 - Unable to detect type of freezing of gait when an FOG event is detected by the model
 - Overfitting of model, which means model might perform poorly on other types of data. 
   
-* What would you do differently with more time/resources?
+** What would you do differently with more time/resources?**
 - Train CNN model by feeding images of acceleration over time
 - Delve into Deep learning models by feeding spectrogram data
 
-* What additional datasets or techniques would you explore?
+** What additional datasets or techniques would you explore?**
 - Reduce dimensionality technique
 - Using shap to determine which features are most significant.
 
@@ -268,7 +266,7 @@ This project is licensed under the MIT License.
 
 ---
 
-## 📄 **References** (Optional but encouraged)
+## 📄 **References** 
 
 Cite relevant papers, articles, or resources that supported your project.
 
@@ -280,7 +278,7 @@ Salomon, A., Gazit, E., Ginis, P., Urazalinov, B., Takoi, H., Yamaguchi, T., God
 
 ---
 
-## 🙏 **Acknowledgements** (Optional but encouraged)
+## 🙏 **Acknowledgements** 
 
 We would like to extend a huge thank you to Harshini, Seth, and Barbara for all their time, expert guidance, and immense encouragement throughout the project. Thank you so much for helping us achieve this milestone!
 
