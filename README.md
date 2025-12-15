@@ -10,7 +10,7 @@
 |------------------|---------------|--------------------------------------------------------------------------|
 | Bhuvana Kotha    | @bhuvanak04 | Data exploration, visualization, EDA, RF, RNN            |
 | Marc Romero   | @MarcRomero16 | Data visualization, exploratory data analysis (EDA), FFTs, feature engineering, RNN |
-| Jeriel Goh    | @  | Data preprocessing, feature engineering, data validation                 |
+| Jeriel Goh    | @JGZH0514  | Data preprocessing, feature engineering, data validation, model training                 |
 | Ramya Madugula      | @ramyaxmad       | Data visualization, EDA, FFTs, feature engineering (TSFresh), Tree models |
 | Mehek      | @chrispark    | Model evaluation, performance analysis, results interpretation           |
 | Saniya      | @chrispark    | Model evaluation, performance analysis, results interpretation           |
@@ -228,6 +228,7 @@ Strong performance on normal gait (99% recall)
 Lower recall on rare FoG events (turning and start hesitation)
 
 - **CNN**: 
+(Not applicable, trained on wrong data)
 
 - **RNN**: 
 Accuracy: 92–93%
@@ -235,26 +236,34 @@ Precision: ~0.92
 Recall: ~0.89
 ROC-AUC: ~0.98
 
-
+- **LSTM**: 
+Accuracy: 91–92%
+Precision: ~0.92
+Recall: ~0.86
+ROC-AUC: ~0.97
 ---
 
 ## 🚀 **Next Steps**
 
 **You might consider addressing the following (as applicable):**
 
-* What are some of the limitations of your model?
+* Model limitations?
+- Unable to detect type of freezing of gait when an FOG event is detected by the model
+- Overfitting of model, which means model might perform poorly on other types of data. 
+  
 * What would you do differently with more time/resources?
-* What additional datasets or techniques would you explore?
+- Train CNN model by feeding images of acceleration over time
+- Delve into Deep learning models by feeding spectrogram data
 
+* What additional datasets or techniques would you explore?
+- Reduce dimensionality technique
+- Using shap to determine which features are most significant.
 
 
 ---
 
 ## 📝 **License**
 
-If applicable, indicate how your project can be used by others by specifying and linking to an open source license type (e.g., MIT, Apache 2.0). Make sure your Challenge Advisor approves of the selected license type.
-
-**Example:**
 This project is licensed under the MIT License.
 
 ---
@@ -262,6 +271,12 @@ This project is licensed under the MIT License.
 ## 📄 **References** (Optional but encouraged)
 
 Cite relevant papers, articles, or resources that supported your project.
+
+Manor B;Dagan M;Herman T;Gouskova NA;Vanderhorst VG;Giladi N;Travison TG;Pascual-Leone A;Lipsitz LA;Hausdorff JM; (n.d.). Multitarget transcranial electrical stimulation for freezing of gait: A randomized controlled trial. Movement disorders : official journal of the Movement Disorder Society. https://pubmed.ncbi.nlm.nih.gov/34406695/ 
+
+Reches T;Dagan M;Herman T;Gazit E;Gouskova NA;Giladi N;Manor B;Hausdorff JM; (n.d.). Using wearable sensors and machine learning to automatically detect freezing of gait during a fog-provoking test. Sensors (Basel, Switzerland). https://pubmed.ncbi.nlm.nih.gov/32785163/ 
+
+Salomon, A., Gazit, E., Ginis, P., Urazalinov, B., Takoi, H., Yamaguchi, T., Goda, S., Lander, D., Lacombe, J., Sinha, A. K., Nieuwboer, A., Kirsch, L. C., Holbrook, R., Manor, B., & Hausdorff, J. M. (2024, June 6). A machine learning contest enhances automated freezing of gait detection and reveals time-of-day effects. Nature News. https://www.nature.com/articles/s41467-024-49027-0 
 
 ---
 
