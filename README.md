@@ -12,7 +12,7 @@
 | Marc Romero   | @MarcRomero16 | Data visualization, exploratory data analysis (EDA), FFTs, feature engineering, RNN |
 | Jeriel Goh    | @JGZH0514  | Data preprocessing, feature engineering, data validation, model training                 |
 | Ramya Madugula      | @ramyaxmad       | Data visualization, EDA, FFTs, feature engineering (TSFresh), Tree models |
-| Mehek      | @chrispark    | Model evaluation, performance analysis, results interpretation           |
+| Mehek      | @MehekB    | Exploratory data analysis (EDA), Neural networks, Model evaluation, Performance analysis           |
 | Saniya      | @chrispark    | Model evaluation, performance analysis, results interpretation           |
 
 
@@ -20,30 +20,15 @@
 
 ## 🎯 **Project Highlights**
 
-**Example:**
-- Developed a machine learning model using `[model type/technique]` to address `[challenge project task]`.
-- Achieved `[key metric or result]`, demonstrating `[value or impact]` for `[host company]`.
-- Generated actionable insights to inform business decisions at `[host company or stakeholders]`.
-- Implemented `[specific methodology]` to address industry constraints or expectations.
-
-- Developed a machine learning model using a `[supervised classification]` approach to detect Freezing of Gait (FoG) in Parkinson's Disease patients from wearable 3D lower back sensor data.
-- Project targets `[>90% sensitivity and >85% F1 score]` to ensure reliability for clinical decision-making.
-- The model aims to be `[validated, interpretable, and efficient]` for potential integration into `[wearable devices or mobile health platforms.]`
-- Generated actionable insights to inform business decisions at `[Michael J. Fox Foundation]` and to improve patient outcomes.
+- Developed a machine learning model using a `supervised classification` approach to detect Freezing of Gait (FoG) in Parkinson's Disease patients from wearable 3D lower back sensor data.
+- Project targets `>90% sensitivity and >85% F1 score` to ensure reliability for clinical decision-making.
+- The model aims to be `validated, interpretable, and efficient` for potential integration into `wearable devices or mobile health platforms.`
+- Generated actionable insights to inform business decisions at `Michael J. Fox Foundation` and to improve patient outcomes.
 
 
 ---
 
 ## 👩🏽‍💻 **Setup and Installation**
-
-**Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
-
-* How to clone the repository
-* How to install dependencies
-* How to set up the environment
-* How to access the dataset(s)
-* How to run the notebook or scripts
-
 
 Our main development workflow used a **Kaggle Notebook**, and we pushed code changes back to this GitHub repo through our individual branches. Below are instructions for reproducing our results on **Kaggle**.
 
@@ -78,12 +63,6 @@ Our main development workflow used a **Kaggle Notebook**, and we pushed code cha
 
 ## 🏗️ **Project Overview**
 
-**Describe:**
-
-- How this project is connected to the Break Through Tech AI Program
-- Your AI Studio host company and the project objective and scope
-- The real-world significance of the problem and the potential impact of your work
-
 This project is part of the AI Studio Challenge Project, focusing on applying AI/ML to a real-world problem as part of the Break Through Tech AI Program.
 The host company is the Michael J. Fox Foundation. The project objective is to develop an ML model, trained on data from a wearable 3D lower back sensor, to detect Parkinson's Freezing of Gait (FoG). The scope is to treat this as a supervised classification task, aiming for high accuracy, sensitivity (>90%), and F1 score (>85%) for potential integration into wearable devices or mobile health platforms.
 Freezing of Gait (FoG) is a debilitating symptom of Parkinson's Disease. The successful model will significantly improve patient care by assisting researchers and hospitals, allowing clinicians to identify FoG patterns and adjust treatment plans, which aligns with the MJF Foundation's mission to improve patient outcomes.
@@ -91,17 +70,6 @@ Freezing of Gait (FoG) is a debilitating symptom of Parkinson's Disease. The suc
 ---
 
 ## 📊 **Data Exploration**
-
-**You might consider describing the following (as applicable):**
-
-* The dataset(s) used: origin, format, size, type of data
-* Data exploration and preprocessing approaches
-* Insights from your Exploratory Data Analysis (EDA)
-* Challenges and assumptions when working with the dataset(s)
-
-**Potential visualizations to include:**
-
-* Plots, charts, heatmaps, feature visualizations, sample dataset images
 
 ### Dataset
 
@@ -193,35 +161,18 @@ These visualizations helped us understand both the **structure of the data** and
 
 ## 🧠 **Model Development**
 
-**You might consider describing the following (as applicable):**
-
-* Model(s) used (e.g., CNN with transfer learning, regression models)
-* Feature selection and Hyperparameter tuning strategies
-* Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
-
 - **Tree Based models**: Decision Tree, XGBoost, and Random Forest. 
 - **CNN**: 
 - **RNN**: 
-
 
 
 ---
 
 ## 📈 **Results & Key Findings**
 
-**You might consider describing the following (as applicable):**
-
-* Performance metrics (e.g., Accuracy, F1 score, RMSE)
-* How your model performed
-* Insights from evaluating model fairness
-
-**Potential visualizations to include:**
-
-* Confusion matrix, precision-recall curve, feature importance plot, prediction distribution, outputs from fairness or explainability tools
-
 - **Tree Based models**: Decision Tree, XGBoost, and Random Forest. The Models appear flawless and raises many concerns on whether the model is able to predict fog based on signal processing data. We can see the metrics - Precision and recall are perfect, roc is perfect. We suspect that because of the way the data we fed into the model has many time windows that overlap and how the labels are based on events, the model sees the same signal repetition. The model is overfitting and not able to handle noise sensitive data. Trees make piecewise predictions, they struggle to model gradual changes in signals. 
 
--**Random Forest**: 
+- **Random Forest**: 
 Accuracy: 88%
 ROC-AUC: 0.86
 Strong performance on normal gait (99% recall)
@@ -245,15 +196,15 @@ ROC-AUC: ~0.97
 
 ## 🚀 **Next Steps**
 
-** Model limitations **
+**Model limitations**
 - Unable to detect type of freezing of gait when an FOG event is detected by the model
 - Overfitting of model, which means model might perform poorly on other types of data. 
   
-** What would you do differently with more time/resources?**
+**What would you do differently with more time/resources?**
 - Train CNN model by feeding images of acceleration over time
 - Delve into Deep learning models by feeding spectrogram data
 
-** What additional datasets or techniques would you explore?**
+**What additional datasets or techniques would you explore?**
 - Reduce dimensionality technique
 - Using shap to determine which features are most significant.
 
