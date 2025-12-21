@@ -38,7 +38,7 @@ Our main development workflow used a **Kaggle Notebook**, and we pushed code cha
 
 1. **Open the Kaggle notebook**
 
-   - Go to: `Marc’s Kaggle Notebook` {Place your links next to mine please}
+   - Go to: `Marc’s Kaggle Notebook` {(https://github.com/ramyaxmad/MJF-1A-Parkinson-s-Freezing-of-Gait-Prediction/blob/Marc_Branch/marc-s-notebook.ipynb)}
    - Click **“Copy & Edit”** to save a copy to your own Kaggle account.
 
 2. **Attach the dataset**
